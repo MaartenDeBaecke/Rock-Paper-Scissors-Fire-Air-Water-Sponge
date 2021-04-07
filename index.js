@@ -57,7 +57,7 @@ function game(){
     user_emoji.innerHTML = emojiDic[bot_item];
 
     winner(user_item, bot_item);
-  }, i * 700);
+  }, i * 710);
 
 
 
@@ -91,6 +91,8 @@ function winner(user, bot){
 
   if (user === bot){
     countdown.innerHTML = "You Tie!";
+    let subtext = document.getElementById("subtext");
+    subtext.classList.add("invisible");
   } else if (defeats.includes(bot)){
     countdown.innerHTML = "Wins from";
     subtext.innerHTML = "You Win!";
